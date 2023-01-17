@@ -6,6 +6,8 @@ header <- scan(file, nlines = 1, sep="\t", what = character())
 data <- read.table(file, skip = 2, header = FALSE, sep = "\t", quote = "", check.names=FALSE)
 names(data) <- header
 
+dim(data)
+
 header2 <- scan(file, skip = 1, nlines = 1, sep="\t", what = character())
 
 LumA <- data[data$sample_id %in% first10,header2=='Luminal A']
